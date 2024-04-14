@@ -484,3 +484,49 @@ background-color:#31d0aa;
 .footer-wrap, .footer-social{
 display: inline-block;
 }
+.backdrop{
+width: 100%;
+height: 100%;
+background-color: #2E2F4266; 
+position: fixed;
+top: 0;
+/*display: flex;
+justify-content: center;
+align-items: center;*/
+
+
+}
+.modal{
+width: 408px;
+min-height: 584px;
+background-color: #FCFCFC;
+top: 50%;
+left: 50%;
+border-radius: 4px;
+transform: translate(-50%, -50%);
+position: absolute;
+}
+.modal-btn{
+    position:absolute ;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #0000001A;
+    border-radius: 50%;
+    background-color: #E7E9FC;
+}
+.modal-title{
+text-align: center;
+max-width: 360px;
+margin-top: 72px;
+margin-bottom: 16px;
+}
+.modal-input{
+width: 100%;
+max-width: 360px;
+height: 40px;
+background-color: #FCFCFC;
+border-radius: 4px 0px 0px 0px;
+border: 1px 0px 0px 0px;
+}
