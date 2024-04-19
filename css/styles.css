@@ -668,23 +668,6 @@ border-color: #4D5AE5;
 .modal-input:focus+.modal-icon {
 fill: #4D5AE5;
 }
-/*.modal-text{
-width: 360px;
-height: 120px;
-border-radius: 4px;
-border: 1px solid #2E2F4266;
-padding: 8px 16px;
-text-align: center;
-padding-bottom: 16px;
-outline: transparent;
-font-size: 12px;
-font-weight: 400;
-line-height: 14px;
-letter-spacing: 0.04em;
-text-align: left;
-resize: none;
-color:#8E8F99;
-}*/
 .modal-field-comment{
 width: 100%;
 height: 138px;
@@ -694,7 +677,6 @@ position: relative;
 outline: transparent;
 margin-bottom: 16px
 }
-
 .modal-text-comment{
 width: 100%;
 height: 120px;
@@ -724,8 +706,8 @@ color: #8E8F99;
 width: 16px;
 height: 16px;
 border-radius: 2px;
+align-items: center;
 display: inline-flex;
-align-content: center; 
 justify-content:center ;   
 border: 1px solid rgba(46, 47, 66, 0.4);
 fill: transparent;
@@ -733,7 +715,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
 fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.check-empty:checked{
+.input:checked{
 background-color: #404bbf;
 border: none;
 fill: #F4F4FD;
@@ -746,6 +728,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap: 12px;
+
 }
 .check-text-link{
 line-height: 133%;
@@ -769,5 +752,6 @@ justify-content: center;
 align-items: center;
 background-color: #4D5AE5;
 border: none;
+margin: 0 auto;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
