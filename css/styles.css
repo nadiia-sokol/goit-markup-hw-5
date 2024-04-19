@@ -212,9 +212,7 @@ gap: 24px;
 visibility: hidden;
     /*width:calc((100% - 3*24px)/4);*/
 }
-.main-link .main-icons{
-/*width: calc((100% - 3*24px)/4);*/
-}
+
 .main-link-icons{
 display: flex;
 justify-content: center;
@@ -386,6 +384,7 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #434455;
+padding-left: 16px;
 }
 .cover-text {
 position: absolute;
@@ -452,8 +451,9 @@ max-width: 264px;
 margin-bottom: 16px;
 }
 .footer-social{
-display: flex;
-align-items: baseline;
+/*display: flex;
+align-items: baseline;*/
+margin-right:  80px;
 }
 .footer-icon-list{
 display: flex;
@@ -484,17 +484,69 @@ background-color:#31d0aa;
 .footer-wrap, .footer-social{
 display: inline-block;
 }
+.footer-div-wrap{
+
+}
+.footer-title{
+font-weight: 500;
+font-size: 16px;
+list-style: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
+padding-bottom: 16px;
+}
+.footer-form{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 24px;
+}
+.footer-input{
+width: 264px;
+height: 40px;
+background-color: transparent;
+border-radius: 4px;
+border: 1px solid #fff;
+font-size: 12px;
+line-height: 200%;
+letter-spacing: 0.04em;
+color:#fff;;
+padding-left: 16px;
+}
+.footer-btn{
+width: 165px;
+height:40px ;
+padding: 8px 24px;
+border-radius: 4px;
+background: #4d5ae5;
+cursor: pointer;
+display: block;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.04em;
+text-align: center;
+color: #FFF;
+}
+
+/* --Modal__*/
 .backdrop{
 width: 100%;
 height: 100%;
-background-color: #2E2F4266; 
+background-color: rgba(46, 47, 66, 0.4);
 position: fixed;
 top: 0;
-/*display: flex;
-justify-content: center;
-align-items: center;*/
+left: 0;
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+transition: opacity 250ms cubic-bezier(0.4, 0,0.2,1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-
+.backdrop.is-open {
+opacity: 1;
+visibility: visible; 
+pointer-events: auto;
 }
 .modal{
 width: 408px;
@@ -505,6 +557,8 @@ left: 50%;
 border-radius: 4px;
 transform: translate(-50%, -50%);
 position: absolute;
+padding: 72px 24px 24px 24px;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn{
 position:absolute ;
@@ -512,21 +566,131 @@ top: 24px;
 right: 24px;
 width: 24px;
 height: 24px;
+padding: 0;
+cursor: pointer;
+display: flex;
 border: 1px solid #0000001A;
 border-radius: 50%;
 background-color: #E7E9FC;
+justify-content: center;
+align-items: center;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn:hover,
+.modal-btn:focus{
+background-color: #404bbf;
+border: none;
+}
+.modal-icon-close{
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn:hover>.modal-icon-close,
+.modal-btn:focus>.modal-icon-close {
+fill: #ffffff;
 }
 .modal-title{
+font-size: 16px;
+font-weight: 500px;
+line-height: 24px;
+letter-spacing: 0.02em;
 text-align: center;
-max-width: 360px;
-margin-top: 72px;
 margin-bottom: 16px;
+}
+.modal-field{
+width: 100%;
+height: 58px;
+background-color:transparent; 
+border-radius: 4px;
+position: relative;
+outline: transparent;
+margin-bottom: 8px;
+}
+.modal-input-wrap{
+position: relative;
 }
 .modal-input{
 width: 100%;
-max-width: 360px;
 height: 40px;
-background-color: #FCFCFC;
-border-radius: 4px 0px 0px 0px;
-border: 1px 0px 0px 0px;
+border-radius: 4px;
+border: 1px solid rgba(46, 47, 66, 0.4);;
+padding-left: 16px;
+padding-bottom: 16px;
+outline: transparent;
+background-color: transparent;
+}
+.modal-icon{
+position: absolute;
+left: 16px;
+top: 50%;
+transform:translate(-50%);
+fill: #2E2F42;
+}
+.modal-label{
+display: block;
+margin-bottom: 4px;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.04em;
+text-align: left;
+color: #8E8F99;
+}
+.modal-input:focus,
+.modal-text:focus {
+border-color: #4D5AE5;
+}
+.modal-input:focus+.modal-icon {
+fill: #4D5AE5;
+}
+.modal-text{
+width: 360px;
+height: 120px;
+border-radius: 4px;
+border: 1px solid #2E2F4266;
+padding: 8px 16px;
+text-align: center;
+padding-bottom: 16px;
+outline: transparent;
+font-size: 12px;
+font-weight: 400;
+line-height: 14px;
+letter-spacing: 0.04em;
+text-align: left;
+resize: none;
+color:#8E8F99;
+}
+/*.modal-check{
+
+}*/
+.check-text{
+line-height: 1.17;
+font-size: 12px;
+letter-spacing: 0.04em;
+color: #8E8F99;
+}
+.check-empty{
+width: 16px;
+height: 16px;
+border-radius: 2px;
+display: inline-flex;
+align-content: center; 
+justify-content:center ;   
+border: 1px solid #2e2f42;
+fill: transparent;
+}
+
+.check-icon{
+font-size: 12px;
+letter-spacing: 0.04em;
+color: #8e8f99;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+}
+.check-text-link{
+line-height: 133%;
+text-decoration: underline;
+text-decoration-skip-ink: none;
+color: #4d5ae5;
 }
