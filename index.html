@@ -542,31 +542,28 @@
                         </svg>
                      </div>
                </div>
-               <div class="modal-field">
+               <div class="modal-field-comment">
                      <label for="user-comment" class="modal-label">Comment</label>
                      <textarea 
                      name="user-comment" 
                      id="user-comment" 
                      placeholder="Text input"
-                     class="modal-text"
+                     class="modal-text-comment"
                      ></textarea>
                </div>
+               <div class="modal-field-check visually-hidden">
+               
+                  <input type="checkbox" id="policy" name="policy" class="modal-check" value="true" />
+                  <label for="policy" class="check-text">
+                     <span class="chek-empty">
+                        <svg class="chek-icon" width="16" height="16">
+                           <use href="./images/icons.svg#icon-Vector"></use>
+                        </svg>
+                     </span>
+                     I accept the terms and conditions of the <a class="check-text-link">Privacy Policy</a> </label>
+               </div>
             </form>
-            <div class="modal-field visually-hidden">
             
-               <input type="checkbox" 
-               id="policy" 
-               name="policy" 
-               class="modal-check" 
-               value="true"/>
-               <label for="policy" class="check-text">
-                  <span class="chek-empty">
-                  <svg class="chek-icon" width="16" height="16">
-                     <use href="./images/icons.svg#icon-Vector" ></use>
-                  </svg>
-                  </span>
-                  I accept the terms and conditions of the <a class="check-text-link">Privacy Policy</a> </label>
-            </div>
             <button class="modal-btn-send" type="submit">Send</button>
          </div>
          
